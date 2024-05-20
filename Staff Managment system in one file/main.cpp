@@ -841,8 +841,8 @@ public:
             cout << "Employee Data " << el;
             display_employee_for_save(New_employee);
             cout << "Are you sure you want to save this data?" << el;
-            cout << GREEN << "Yes" << el;
-            cout << RED << "No" << RESET << el;
+            cout << GREEN << "Y/yes" << el;
+            cout << RED << "N/no" << RESET << el;
 
             string option;
             while (true) {
@@ -863,7 +863,7 @@ public:
                     break;
                 }
                 else {
-                    cout << "Invalid choice. Please enter Y/N or Yes/No.\n";
+                    cout << "Invalid choice. Please enter Y/yes or N/no.\n";
                 }
             }
             break;
@@ -1209,7 +1209,7 @@ public:
             cout << "Are you sure you want to delete employee with id: " << input << "?" << el;
             cout << RED << "Warning: This action CANNOT be reverted!" << RESET << el;
             string option;
-            cout << "Yes" << el << "No" << el;
+            cout << "Y/yes" << el << "N/no" << el;
             while (true) {
                 getline(cin, option);
                 transform(option.begin(), option.end(), option.begin(), ::tolower); // convert to lowercase
@@ -1227,7 +1227,7 @@ public:
                     break;
                 }
                 else {
-                    cout << "Invalid choice. Please enter Y/N or Yes/No.\n";
+                    cout << "Invalid choice. Please enter Y/yes or N/no.\n";
                 }
             }
             break;
@@ -1237,8 +1237,8 @@ public:
         case 6: {
             system(CLEAR);
             cout << "Are you sure you want to save employee data to external files?" << el;
-            cout << GREEN << "Yes" << el;
-            cout << RED << "No" << RESET << el;
+            cout << GREEN << "Y/yes" << el;
+            cout << RED << "N/no" << RESET << el;
             string option;
             cin.ignore();
             while (true) {
@@ -1259,7 +1259,7 @@ public:
                     break;
                 }
                 else {
-                    cout << "Invalid choice. Please enter Y/N or Yes/No.\n";
+                    cout << "Invalid choice. Please enter Y/yes or N/no.\n";
                 }
             }
             break;
@@ -1281,7 +1281,7 @@ public:
         // Clear the console and display the exit message
         system(CLEAR);
         cout << "Staff Management Program" << el << el;
-        cout << "Are you sure you want to exit the program?" << el << RED << "Yes" << el << GREEN << "No" << RESET << el;
+        cout << "Are you sure you want to exit the program?" << el << RED << "Y/yes" << el << GREEN << "N/no" << RESET << el;
 
         string option;
 
@@ -1534,7 +1534,7 @@ public:
         return salary;
     }
 };
-
+ 
 class Staff_Managment_System : public Database, public Menu {
     Database initialize;
     Out_Put_Handler menu_call;
