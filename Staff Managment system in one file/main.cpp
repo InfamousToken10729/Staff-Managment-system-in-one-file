@@ -10,6 +10,8 @@
 
 using namespace std;
 #define el "\n"
+#define FileName "EmployeesData.txt"
+#define ExcelFileName "EmployeesData.csv"
 
 // ANSI escape codes for color
 #define RED "\033[31m"
@@ -395,15 +397,15 @@ public:
 
     //save data to external files
     void save_data_to_file() {
-        saveData(Employees_data, "employeeData");
+        saveData(Employees_data, FileName);
     }
     void save_data_to_excel() {
-        saveExcel(Employees_data, "Employees Data.csv");
+        saveExcel(Employees_data, ExcelFileName);
     }
 
     //Retrive data from external files
     void restore_data_from_file() {
-        restoreData(Employees_data, "employeeData");
+        restoreData(Employees_data, FileName);
     }
 
 
